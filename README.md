@@ -1,10 +1,17 @@
 # imu_madgwick_filter
 madgwick filter arduino library based on the imu_tool madgwick code by CCNYRoboticsLab [link](https://github.com/CCNYRoboticsLab/imu_tools/tree/humble/imu_filter_madgwick)
 
-follow the example `imu_sample_template.ino` code to see how to use it.
+## How to Use the Library
+- Download download the library by clicking on the green Code button above (or clone it)
 
-</br>
+- Move the downloaded library file to your Arduino library folder
+  > e.g on linux: ... home/Arduino/libraries/
+  >
+  > e.g on windows: ... Documents/Arduino/libraries/
 
+- follow the example `imu_sample_template.ino` code to see how to use it.
+
+## Things to NOTE before using the library
 > Note each steps in the example code (based on the comments)
 > shows you the process of using the madgwick filter
 > Follow the steps and use it based on your own IMU.
