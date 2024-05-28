@@ -1,15 +1,7 @@
 /*
  * MODIFIED BY OBIAGBA SAMUEL
  *
- * Copyright (c) 2023 Samuko Robotics Inc
- *
- *
- *
- * Brian R Taylor
- * brian.taylor@bolderflight.com
- *
- * Copyright (c) 2021 Bolder Flight Systems Inc
- *
+ * samuko-things
  */
 
 #include <MatVectLab.h>
@@ -43,8 +35,6 @@ void setup()
   imu.Config(&Wire, bfs::Mpu9250::I2C_ADDR_PRIM);
   //----------------------------------------------------------------//
 
-
-
   //---------------- INITIALIZE IMU -----------------------//
   /* Initialize and configure IMU */
   if (!imu.Begin()) {
@@ -56,10 +46,6 @@ void setup()
     while (1) {}
   }
   //----------------------------------------------------------------//
-
-  // update global params with eeprom contents
-  updateGlobalParamsFromEERPOM();
-  /////////////////////////////////////////////
 
   madgwickFilter.setAlgorithmGain(1.0);
   madgwickFilter.setDriftBiasGain(0.0);
@@ -148,6 +134,7 @@ void loop()
 
       // update the filter, which computes orientation
       //gyro - rad/sec;   acc - m/sec;   mag - Tesla
+      // madgwickFilter.madgwickAHRSupdateIMU(_gx, _gy, _gz, _ax, _ay, _az); // for 6 axis IMU
       madgwickFilter.madgwickAHRSupdate(_gx, _gy, _gz, _ax, _ay, _az, _mx, _my, _mz);
 
       float roll=0.00;
