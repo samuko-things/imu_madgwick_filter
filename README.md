@@ -11,6 +11,8 @@ madgwick filter arduino library based on the imu_tool madgwick code by CCNYRobot
 
 - follow the example `imu_sample_template.ino` code to see how to use it.
 
+> NOTE: you can just check how I used it with the MPU6050 (a 6-axis IMU) - [link](https://github.com/samuko-things/arduino_mpu6050)
+
 ## Things to NOTE before using the library
 > Note each steps in the example code (based on the comments)
 > shows you the process of using the madgwick filter
@@ -18,7 +20,7 @@ madgwick filter arduino library based on the imu_tool madgwick code by CCNYRobot
 
 </br>
 
-> If you are using the MPU6050 (a 6-axis IMU) for example, you can skip the magnetometer part
+> If you are using the MPU6050 (a 6-axis IMU) for example, you can skip the magnetometer part - [sample code](https://github.com/samuko-things/arduino_mpu6050)
 
 </br>
 
